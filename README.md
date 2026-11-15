@@ -43,7 +43,7 @@ python 03_facility_location.py
 ```
 
 ## What I learned
-(Write 3 or 4 sentences in your own words: what surprised you, which result you would explain to a client, what you would add next.)
+Working through these models taught me that the cheapest-looking plan is often impossible once real constraints are included. In the shipping model, sending each store’s order from its cheapest warehouse looked like $450, but it required more stock than Warehouse B had. The feasible optimum cost $480. Changing one input, such as capping a lane or cutting a warehouse’s supply, shows which assumptions matter most, and it can make the problem infeasible. The inventory model showed that a node-by-node view hides how much redundant stock sits in the network, and the facility-location model showed that the best set of sites switches when fixed costs or demand change. Next I want to add vehicle routing and test the models with realistic data.
 
 ## Limitations
 Small, simplified, made-up data. Real projects need real cost data, validated inputs, more constraints (service times, labor, multiple products), and review with the people who run the operation.
