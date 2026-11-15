@@ -1,0 +1,7 @@
+Base case                                      cost $   480   plan (rows=A,B): [[30, 0, 30], [0, 40, 0]]
+Naive cheapest-warehouse plan                  cost $   450   but B must ship 70 units, has 40: infeasible
+Lane B->store 2 capped at 20 (closure)         cost $   520   plan (rows=A,B): [[30, 20, 10], [0, 20, 20]]
+Fuel spike: all B lanes cost +$2               cost $   560   plan (rows=A,B): [[30, 0, 30], [0, 40, 0]]
+Store 3 demand +10 (needs 10 more supply)      cost $   560   plan (rows=A,B): [[30, 0, 40], [0, 40, 0]]
+Warehouse B supply drops to 30                 INFEASIBLE (supply cannot meet demand)
+Warehouse A->store 3 cost falls $8 -> $5       cost $   390   plan (rows=A,B): [[30, 0, 30], [0, 40, 0]]
